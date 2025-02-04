@@ -1,0 +1,25 @@
+crear entorno virtual:
+python -m venv venv
+
+iniciar entorno:
+venv\Scripts\activate
+
+instalar fastapi y uvicorn:
+pip install fastapi[all] uvicorn sqlalchemy alembic
+
+verificar versiones:
+python -c "import fastapi; print(fastapi.__version__)"
+uvicorn --version
+
+iniciar API:
+uvicorn app.main:app --reload
+- http://127.0.0.1:8000/ ► home
+- http://127.0.0.1:8000/docs ► documentacion swagger
+- http://127.0.0.1:8000/redoc ► documentacion ReDoc
+
+crear la base de datos:
+python -c "from app.database.database import Base, engine; Base.metadata.create_all(bind=engine)"
+
+crear un archivo requeriments del proyecto:
+pip freeze > requirements.txt
+
