@@ -11,7 +11,18 @@ Este proyecto es una API RESTful construida con **FastAPI** para la gestión de 
 - ✅ Desplegado en Docker 🐳
 
 ## 📂 Estructura del Proyecto
-Proyecto Crud Completo │── app │ ├── database │ ├── models │ ├── routers │ ├── schemas │ ├── main.py │── venv (Ignorado en .gitignore) │── Dockerfile │── docker-compose.yml │── requirements.txt │── README.md
+Proyecto Crud Completo
+ │── app │ 
+ ├── database │ 
+ ├── models │ 
+ ├── routers │ 
+ ├── schemas │ 
+ ├── main.py 
+ │── venv (Ignorado en .gitignore) 
+ │── Dockerfile 
+ │── docker-compose.yml 
+ │── requirements.txt 
+ │── README.md
 
 ## 🛠️ Instalación
 
@@ -21,27 +32,28 @@ Proyecto Crud Completo │── app │ ├── database │ ├── models
 git clone https://github.com/AreYoohReady/fastapi-crud.git
 cd fastapi-crud
 
-2. crear entorno virtual e instalar depencdenciass
+2. 🛠️ crear entorno virtual e instalar depencdenciass
 
-python -m venv venv
-source venv/Scripts/activate  # En Windows
-pip install -r requirements.txt
+    python -m venv venv
+    source venv/Scripts/activate
+    pip install -r requirements.txt
 
-3. ejecutar el servidor fastapi
+3. 🛠️ ejecutar el servidor fastapi
 
-uvicorn app.main:app --reload
-a API estará disponible en:
+ uvicorn app.main:app --reload
 
-http://127.0.0.1:8000/docs (Swagger)
-http://127.0.0.1:8000/redoc (ReDoc)
+    la API estará disponible en:
+
+        http://127.0.0.1:8000/docs (Swagger)
+        http://127.0.0.1:8000/redoc (ReDoc)
 
 🐳 Docker
 
-1. construir la imagen
+1. 🐳 construir la imagen
 
-docker build -t fastapi-crud .
+    docker build -t "inserte_nombre" .
 
-2. ejecutar el contenedor
+2. 🐳 ejecutar el contenedor
 
-docker run -d -p 8000:8000 fastapi-crud
+    docker run -d --name "inserte_nombre" -p 8000:8000 _nombre insertado en paso anterior_
 
